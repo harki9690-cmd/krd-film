@@ -68,7 +68,7 @@ nav a:hover{
 
 .hero{
     height:100vh;
-    background:url("assets/hero.jpg") center/cover no-repeat;
+    background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600") center/cover no-repeat;
     display:flex;
     align-items:center;
 }
