@@ -198,3 +198,4 @@ nav{
 .movies{
     padding:40px 20px;
 }
+}
