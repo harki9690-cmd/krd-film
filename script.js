@@ -219,14 +219,3 @@ searchInput.addEventListener("keyup", function () {
         } else {
             card.style.display = "none";
         }
-
-    });
-
-});
-
-// Watch Now Button
-const watchButton = document.querySelector(".overlay button");
-
-watchButton.addEventListener("click", () => {
-    alert("Welcome to KRD FILM 🎬");
-});
