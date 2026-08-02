@@ -263,3 +263,151 @@ placeholder="گەڕان بۆ فیلم..."
 <h2>فیلمە نوێکان</h2>
 
 <div class="movies">
+
+<div class="movies">
+
+<div class="card">
+<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+<h3>The Dark Knight</h3>
+<p>Action • Crime • Drama</p>
+</div>
+
+<div class="card">
+<img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Avengers Endgame">
+<h3>Avengers: Endgame</h3>
+<p>Action • Adventure</p>
+</div>
+
+<div class="card">
+<img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg" alt="Interstellar">
+<h3>Interstellar</h3>
+<p>Sci-Fi • Adventure</p>
+</div>
+
+<div class="card">
+<img src="https://image.tmdb.org/t/p/w500/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg" alt="Joker">
+<h3>Joker</h3>
+<p>Drama • Crime</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?5" alt="Movie 5">
+<h3>Spider-Man: No Way Home</h3>
+<p>Action • Adventure</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?6" alt="Movie 6">
+<h3>John Wick 4</h3>
+<p>Action • Thriller</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?7" alt="Movie 7">
+<h3>Oppenheimer</h3>
+<p>Drama • History</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?8" alt="Movie 8">
+<h3>Dune: Part Two</h3>
+<p>Sci-Fi • Adventure</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2>زنجیرە پڕبینەرەکان</h2>
+
+<div class="movies">
+
+<div class="card">
+<img src="https://picsum.photos/300/450?9" alt="Series 1">
+<h3>Breaking Bad</h3>
+<p>Crime • Drama</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?10" alt="Series 2">
+<h3>Stranger Things</h3>
+<p>Sci-Fi • Horror</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?11" alt="Series 3">
+<h3>Wednesday</h3>
+<p>Mystery • Fantasy</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/450?12" alt="Series 4">
+<h3>The Last of Us</h3>
+<p>Drama • Adventure</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>دەربارەی KRD Film</h2>
+
+<p style="color:#ccc;line-height:2;font-size:18px;">
+KRD Film وێبسایتێکە بۆ سەیرکردنی فیلم و زنجیرەکان بە دیزاینێکی مۆدێرن.
+ئەم وێبسایتە Responsive ـە و لە مۆبایل و کۆمپیوتەر بە باشی کار دەکات.
+</p>
+
+</section>
+
+<footer>
+
+<h3>KRD Film</h3>
+
+<p>
+© 2026 KRD Film. All Rights Reserved.
+</p>
+
+<p>
+Developed by KRD Film
+</p>
+
+</footer>
+
+<script>
+
+const search=document.querySelector(".search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.display=
+card.innerText.toLowerCase().includes(value)
+?
+"block"
+:
+"none";
+
+});
+
+});
+
+</script>
+
+window.addEventListener("load",()=>{
+
+document.body.style.opacity="1";
+
+});
+
+document.querySelectorAll(".card").forEach(card
+
+</script>
+
+</body>
+</html>
