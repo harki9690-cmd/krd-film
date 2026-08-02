@@ -1,34 +1,91 @@
 <!DOCTYPE html>
 <html lang="ku">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRD FILM</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRD FILM</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <h1>KRD FILM</h1>
+    <div class="logo">
+        KRD <span>FILM</span>
+    </div>
 
     <nav>
         <a href="#">Home</a>
         <a href="#">Movies</a>
         <a href="#">Series</a>
+        <a href="#">Trending</a>
         <a href="#">My List</a>
     </nav>
+
+    <div class="search">
+        <input type="text" placeholder="Search Movies...">
+    </div>
 </header>
 
 <section class="hero">
-    <h2>Unlimited Movies & TV Shows</h2>
-    <p>Watch Anywhere. Anytime.</p>
-    <button>Watch Now</button>
+
+<div class="overlay">
+
+<h1>Welcome to KRD FILM</h1>
+
+<p>
+Watch the newest Movies & TV Shows
+with a beautiful Netflix-style design.
+</p>
+
+<button>▶ Watch Now</button>
+
+</div>
+
 </section>
 
 <section class="movies">
-    <h2>Trending</h2>
-    <div id="trending"></div>
+
+<h2>Trending Movies</h2>
+
+<div class="movie-row">
+
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+
+</div>
+
 </section>
+
+<section class="movies">
+
+<h2>Popular Movies</h2>
+
+<div class="movie-row">
+
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 KRD FILM</p>
+
+</footer>
 
 <script src="script.js"></script>
 
