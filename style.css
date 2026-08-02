@@ -37,7 +37,6 @@ img{
 .logo{
     font-size:38px;
     font-weight:800;
-    color:#fff;
 }
 
 .logo span{
@@ -101,7 +100,7 @@ img{
 
 .hero{
     height:100vh;
-     background:url("assets/hero.jpg")center/cover no-repeat;
+    background:url("assets/hero.jpg") center/cover no-repeat;
     display:flex;
     align-items:center;
 }
@@ -273,6 +272,11 @@ img{
     flex-direction:column;
 }
 
+.watch-btn,
+.info-btn{
+    width:100%;
+}
+
 .movies{
     padding:40px 20px;
 }
@@ -283,67 +287,6 @@ img{
 
 .footer-content{
     flex-direction:column;
-}
-
-}
-@media (max-width:900px){
-
-.header{
-    padding:15px;
-}
-
-.logo{
-    font-size:30px;
-    text-align:center;
-}
-
-.navbar{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.right-side{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-}
-
-.search-box{
-    width:100%;
-    max-width:350px;
-}
-
-.login-btn{
-    width:180px;
-}
-
-.hero{
-    margin-top:240px;
-}
-
-.overlay{
-    padding:40px 20px;
-}
-
-.overlay h1{
-    font-size:42px;
-}
-
-.overlay p{
-    font-size:20px;
-}
-
-.hero-buttons{
-    flex-direction:column;
-}
-
-.watch-btn,
-.info-btn{
-    width:100%;
 }
 
 }
