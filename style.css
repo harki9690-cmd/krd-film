@@ -101,7 +101,7 @@ img{
 
 .hero{
     height:100vh;
-    background:url("assets/banner.jpg") center/cover no-repeat;
+     background:url("assets/hero.jpg")center/cover no-repeat;
     display:flex;
     align-items:center;
 }
