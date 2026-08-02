@@ -198,24 +198,3 @@ nav{
 .movies{
     padding:40px 20px;
 }
-
-}
-
-// KRD FILM
-
-const searchInput = document.querySelector(".search input");
-const cards = document.querySelectorAll(".card");
-
-searchInput.addEventListener("keyup", function () {
-
-    const value = this.value.toLowerCase();
-
-    cards.forEach(card => {
-
-        const title = card.querySelector("h3").textContent.toLowerCase();
-
-        if (title.includes(value)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
