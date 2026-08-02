@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(to bottom,rgba(0,0,0,.9),transparent);
+    z-index:1000;
+}
+
+.logo{
+    color:#e50914;
+    font-size:36px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e50914;
+}
+
+.icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-size:20px;
+}
+
+.profile{
+    width:40px;
+    height:40px;
+    border-radius:5px;
+}
+
+.hero{
+    height:100vh;
+    background:url("assets/hero.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right,rgba(0,0,0,.85),rgba(0,0,0,.3));
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    margin-left:70px;
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.buttons button{
+    padding:14px 30px;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    cursor:pointer;
+    margin-right:15px;
+}
+
+.play{
+    background:white;
+    color:black;
+}
+
+.info{
+    background:rgba(109,109,110,.7);
+    color:white;
+}
+
+.movies{
+    padding:40px 60px;
+}
+
+.movies h2{
+    margin-bottom:20px;
+}
+
+.row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.row::-webkit-scrollbar{
+    display:none;
+}
+
+.card{
+    min-width:220px;
+    height:320px;
+    background:#222;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.08);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#999;
+}
