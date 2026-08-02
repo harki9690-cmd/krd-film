@@ -1,205 +1,265 @@
 <!DOCTYPE html>
 <html lang="ku" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KRD Film</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Noto Sans Arabic',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#111;
+background:#0d0d0d;
 color:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+display:block;
+width:100%;
 }
 
 header{
-background:#e50914;
-padding:20px;
-text-align:center;
-font-size:32px;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:999;
+background:rgba(0,0,0,.92);
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:34px;
 font-weight:bold;
+color:#e50914;
 }
 
 nav{
-background:#000;
-padding:15px;
 display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+gap:25px;
+align-items:center;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-font-size:18px;
+font-size:17px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e50914;
 }
 
 .search{
-background:#111;
-padding:20px;
-text-align:center;
-}
-
-.search input{
-width:90%;
-max-width:500px;
-padding:12px;
-font-size:18px;
+width:240px;
+padding:10px 15px;
 border:none;
-border-radius:8px;
+border-radius:30px;
+background:#222;
+color:white;
+font-size:16px;
 outline:none;
 }
 
 .hero{
-min-height:350px;
+margin-top:80px;
+height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80");
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
-padding:20px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:60px;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:20px;
-margin:15px 0;
+font-size:24px;
+color:#ddd;
+margin-bottom:35px;
 }
 
 .hero button{
-padding:12px 30px;
-font-size:18px;
 background:#e50914;
-color:#fff;
+color:white;
 border:none;
+padding:15px 45px;
+font-size:20px;
 border-radius:8px;
 cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+background:#ff1d28;
+}
+
+.section{
+padding:70px 40px;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:30px;
+color:#fff;
 }
 
 .movies{
-padding:30px;
-}
-
-.movies h2{
-margin-bottom:20px;
-}
-
-.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
-background:#222;
-border-radius:10px;
+background:#181818;
+border-radius:12px;
 overflow:hidden;
+transition:.35s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 15px 35px rgba(0,0,0,.5);
 }
 
 .card img{
 width:100%;
-height:260px;
+height:320px;
 object-fit:cover;
 }
 
 .card h3{
-padding:10px;
+padding:15px;
+font-size:22px;
+text-align:center;
+}
+
+.card p{
+padding:0 15px 18px;
+color:#bbb;
+font-size:15px;
 text-align:center;
 }
 
 footer{
 background:#000;
-padding:20px;
+padding:40px;
 text-align:center;
-margin-top:40px;
-color:#aaa;
+color:#888;
+margin-top:70px;
 }
 
 @media(max-width:768px){
 
-.hero h1{
+header{
+padding:15px;
+flex-direction:column;
+gap:15px;
+}
+
+.logo{
 font-size:28px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.search{
+width:100%;
+}
+
+.hero h1{
+font-size:34px;
 }
 
 .hero p{
 font-size:18px;
 }
 
-nav{
-gap:12px;
+.hero button{
+font-size:18px;
+padding:12px 30px;
+}
+
+.section{
+padding:40px 20px;
 }
 
 }
 </style>
 
-</head>
-
 <body>
 
-<header>KRD Film</header>
+<header>
+
+<div class="logo">
+KRD Film
+</div>
 
 <nav>
 <a href="#">سەرەکی</a>
 <a href="#">فیلمەکان</a>
 <a href="#">زنجیرەکان</a>
+<a href="#">کاتێگۆری</a>
 <a href="#">دەربارە</a>
 </nav>
 
-<div class="search">
-<input type="text" placeholder="گەڕان بۆ فیلم...">
-</div>
+<input
+class="search"
+type="text"
+placeholder="گەڕان بۆ فیلم..."
+>
+
+</header>
 
 <section class="hero">
+
 <h1>بەخێربێیت بۆ KRD Film</h1>
-<p>باشترین شوێنی سەیرکردنی فیلم و زنجیرەکان</p>
-<button>دەستپێبکە</button>
+
+<p>
+باشترین شوێنی سەیرکردنی فیلم و زنجیرەکان
+</p>
+
+<button>
+دەستپێبکە
+</button>
+
 </section>
 
-<section class="movies">
+<section class="section">
+
 <h2>فیلمە نوێکان</h2>
 
-<div class="grid">
-
-<div class="card">
-<img src="https://picsum.photos/300/450?1">
-<h3>Film 1</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?2">
-<h3>Film 2</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?3">
-<h3>Film 3</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?4">
-<h3>Film 4</h3>
-</div>
-
-</div>
-</section>
-
-<footer>
-© 2026 KRD Film
-</footer>
-
-</body>
-</html>
+<div class="movies">
