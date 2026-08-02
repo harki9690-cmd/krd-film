@@ -1,35 +1,30 @@
-const movies = [
-  {
-    title: "Avatar",
-    image: "https://picsum.photos/220/320?random=1"
-  },
-  {
-    title: "John Wick 4",
-    image: "https://picsum.photos/220/320?random=2"
-  },
-  {
-    title: "Interstellar",
-    image: "https://picsum.photos/220/320?random=3"
-  },
-  {
-    title: "Dune",
-    image: "https://picsum.photos/220/320?random=4"
-  },
-  {
-    title: "Oppenheimer",
-    image: "https://picsum.photos/220/320?random=5"
-  }
-];
+// KRD FILM
 
-const trending = document.getElementById("trending");
+console.log("KRD FILM Loaded");
 
-movies.forEach(movie => {
-  const card = document.createElement("div");
-  card.className = "card";
+// Search Box
+const searchInput = document.querySelector(".search input");
 
-  card.innerHTML = `
-    <img src="${movie.image}" alt="${movie.title}">
-  `;
+searchInput.addEventListener("keyup", function () {
+    console.log("Searching:", this.value);
+});
 
-  trending.appendChild(card);
+// Watch Button
+const watchBtn = document.querySelector("button");
+
+watchBtn.addEventListener("click", function () {
+    alert("Movie Player will be added soon!");
+});
+
+// Movie Cards Hover
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.boxShadow = "0 0 25px red";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.boxShadow = "none";
+    });
 });
