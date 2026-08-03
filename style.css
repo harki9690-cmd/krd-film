@@ -29,7 +29,7 @@ img{
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
-    background:rgba(0,0,0,.8);
+    background:rgba(0,0,0,.85);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
@@ -49,7 +49,6 @@ img{
 }
 
 .navbar a{
-    font-size:18px;
     transition:.3s;
 }
 
@@ -72,7 +71,7 @@ img{
 }
 
 .search-box i{
-    color:#777;
+    color:#666;
     margin-right:10px;
 }
 
@@ -87,10 +86,9 @@ img{
     background:#e50914;
     color:#fff;
     border:none;
-    border-radius:40px;
     padding:12px 28px;
+    border-radius:40px;
     cursor:pointer;
-    font-size:16px;
     transition:.3s;
 }
 
@@ -101,7 +99,8 @@ img{
 .hero{
     height:100vh;
     background:url("IMG_0185.jpeg") center center/cover no-repeat;
-    position:relative;
+    display:flex;
+    align-items:center;
 }
 
 .overlay{
@@ -116,16 +115,16 @@ img{
 
 .overlay h1{
     font-size:72px;
-    max-width:700px;
     line-height:1.1;
     margin-bottom:20px;
+    max-width:700px;
 }
 
 .overlay p{
     font-size:24px;
     color:#ddd;
-    max-width:650px;
     margin-bottom:35px;
+    max-width:650px;
 }
 
 .hero-buttons{
@@ -181,8 +180,8 @@ img{
     background:#1b1b1b;
     border-radius:12px;
     overflow:hidden;
-    transition:.3s;
     cursor:pointer;
+    transition:.3s;
 }
 
 .card:hover{
@@ -203,7 +202,7 @@ img{
 
 .footer{
     background:#000;
-    padding:60px;
+    padding:60px 20px;
     margin-top:60px;
 }
 
