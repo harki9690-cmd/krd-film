@@ -1,239 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KRD FILM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
+<header>
+  <div class="logo">My<span>Shop</span></div>
 
-<div class="logo">
-KRD <span>FILM</span>
-</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Categories</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 
-<nav class="navbar">
-<a href="#">Home</a>
-<a href="#">Movies</a>
-<a href="#">Series</a>
-<a href="#">TV Shows</a>
-<a href="#">Trending</a>
-</nav>
-
-<div class="right-side">
-
-<div class="search-box">
-<i class="fa-solid fa-magnifying-glass"></i>
-<input type="text" placeholder="Search Movies...">
-</div>
-
-
-
-
-
-</div>
-
+  <div class="actions">
+    <input type="text" placeholder="Search products...">
+    <button>Cart (0)</button>
+  </div>
 </header>
 
 <section class="hero">
+  <div class="hero-content">
+    <h1>Discover Amazing Products</h1>
+    <p>Shop the latest collections with fast delivery and secure checkout.</p>
+    <button>Shop Now</button>
+  </div>
+</section>
 
-<div class="overlay">
+<section class="products">
 
-<h1>
-Unlimited Movies,<br>
-TV Shows & More
-</h1>
+  <h2>Featured Products</h2>
 
-<p>
-Watch Anywhere. Cancel Anytime.
-</p>
+  <div class="grid">
 
-<div class="hero-buttons">
+    <div class="card">
+      <img src="https://picsum.photos/300/300?1" alt="">
+      <h3>Wireless Headphones</h3>
+      <p>$99</p>
+      <button>Add to Cart</button>
+    </div>
 
-<button class="watch-btn">
-<i class="fa-solid fa-play"></i>
-Watch Now
-</button>
-button>
+    <div class="card">
+      <img src="https://picsum.photos/300/300?2" alt="">
+      <h3>Smart Watch</h3>
+      <p>$149</p>
+      <button>Add to Cart</button>
+    </div>
 
+    <div class="card">
+      <img src="https://picsum.photos/300/300?3" alt="">
+      <h3>Gaming Mouse</h3>
+      <p>$59</p>
+      <button>Add to Cart</button>
+    </div>
 
+    <div class="card">
+      <img src="https://picsum.photos/300/300?4" alt="">
+      <h3>Bluetooth Speaker</h3>
+      <p>$89</p>
+      <button>Add to Cart</button>
+    </div>
 
-
-
-    Your browser does not support the video tag.
-
-</video>
-
-<button class="info-btn">
-<button class="info-btn">
-<i class="fa-solid fa-circle-info"></i>
-More Info
-</button>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<section class="movies">
-
-<h2>Trending Movies</h2>
-
-<div class="movie-row">
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=1">
-<h3>John Wick 4</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=2">
-<h3>Dune Part Two</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=3">
-<h3>Oppenheimer</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=4">
-<h3>Avatar 2</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=5">
-<h3>The Batman</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=6">
-<h3>Mission Impossible</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="movies">
-
-<h2>Popular Movies</h2>
-
-<div class="movie-row">
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=7">
-<h3>Interstellar</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=8">
-<h3>Inception</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=9">
-<h3>Gladiator</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=10">
-<h3>The Dark Knight</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=11">
-<h3>Spider-Man</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=12">
-<h3>Joker</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="movies">
-
-<h2>New Releases</h2>
-
-<div class="movie-row">
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=13">
-<h3>Deadpool</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=14">
-<h3>Fast X</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=15">
-<h3>Venom</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=16">
-<h3>Aquaman</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=17">
-<h3>Black Adam</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/450?random=18">
-<h3>The Flash</h3>
-</div>
-
-</div>
-
-</section>
-
-<footer class="footer">
-
-<div class="footer-content">
-
-<div>
-<h3>KRD FILM</h3>
-<p>Watch Unlimited Movies & TV Shows Anytime.</p>
-</div>
-
-<div>
-<a href="#">Privacy</a><br>
-<a href="#">Terms</a><br>
-<a href="#">Support</a>
-</div>
-
-<div>
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 KRD FILM. All Rights Reserved.
-</p>
-
+<footer>
+  <p>© 2026 MyShop. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
