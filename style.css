@@ -98,11 +98,10 @@ img{
     background:#b20710;
 }
 
-style.css
-
-    
-    
-
+.hero{
+    height:100vh;
+    background:url("IMG_0185.jpeg") center center/cover no-repeat;
+    position:relative;
 }
 
 .overlay{
