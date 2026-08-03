@@ -1,11 +1,17 @@
-// ==========================
-// KRD FILM - script.js
-// ==========================
+// ==============================
+// MyShop - script.js
+// ==============================
 
-// Search Movies
-const searchInput = document.querySelector(".search-box input");
+// Search
+const searchInput = document.querySelector(".actions input");
 const cards = document.querySelectorAll(".card");
 
+// Cart
+let cart = [];
+
+const cartButton = document.querySelector(".actions button");
+
+// Search Products
 if (searchInput) {
     searchInput.addEventListener("keyup", function () {
 
@@ -26,76 +32,77 @@ if (searchInput) {
     });
 }
 
-// Watch Now Button
-const watchBtn = document.querySelector(".watch-btn");
-
-if (watchBtn) {
-    watchBtn.addEventListener("click", () => {
-        alert("🎬 Welcome to KRD FILM!");
-    });
-}
-
-// More Info Button
-const infoBtn = document.querySelector(".info-btn");
-
-if (infoBtn) {
-    infoBtn.addEventListener("click", () => {
-        alert("KRD FILM\nWatch Unlimited Movies & TV Shows.");
-    });
-}
-
-// Login Button
-const loginBtn = document.querySelector(".login-btn");
-
-if (loginBtn) {
-    loginBtn.addEventListener("click", () => {
-        alert("Login page will be added soon.");
-    });
-}
-
-// Movie Cards
+// Add To Cart
 cards.forEach(card => {
 
-    card.addEventListener("click", () => {
+    const button = card.querySelector("button");
+
+    button.addEventListener("click", () => {
 
         const title = card.querySelector("h3").textContent;
+        const price = card.querySelector("p").textContent;
 
-        alert("Now Opening: " + title);
+        cart.push({
+            title,
+            price
+        });
+
+        updateCart();
+
+        button.innerText = "✓ Added";
+
+        setTimeout(() => {
+            button.innerText = "Add to Cart";
+        }, 1200);
 
     });
 
 });
 
-// Header Background on Scroll
-const header = document.querySelector(".header");
+// Update Cart Counter
+function updateCart() {
 
-window.addEventListener("scroll", () => {
+    cartButton.textContent = `Cart (${cart.length})`;
 
-    if (window.scrollY > 50) {
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-        header.style.background = "rgba(0,0,0,.95)";
+}
 
-    } else {
+// Load Cart
+window.addEventListener("load", () => {
 
-        header.style.background = "rgba(0,0,0,.8)";
+    const savedCart = localStorage.getItem("cart");
+
+    if (savedCart) {
+
+        cart = JSON.parse(savedCart);
+
+        updateCart();
 
     }
 
 });
 
-// Smooth Scroll to Movies
-if (watchBtn) {
+// Show Cart
+cartButton.addEventListener("click", () => {
 
-    watchBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+        alert("🛒 Your cart is empty.");
+        return;
+    }
 
-        document.querySelector(".movies").scrollIntoView({
+    let message = "🛒 Shopping Cart\n\n";
 
-            behavior: "smooth"
+    cart.forEach((item, index) => {
 
-        });
+        message += `${index + 1}. ${item.title} - ${item.price}\n`;
 
     });
 
-}
+    message += `\nTotal Items: ${cart.length}`;
 
-console.log("✅ KRD FILM Loaded Successfully");
+    alert(message);
+
+});
+
+console.log("✅ MyShop Loaded Successfully");
